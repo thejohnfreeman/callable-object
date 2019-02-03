@@ -10,8 +10,9 @@ script:
 matrix:
   include:
     - name: lint
-      script: npm lint
+      script: npm run lint
     - name: diff
-      script: diff src/javascript.test.js src/typescript.test.ts
+      # We expect a difference. Do not consider it a failure.
+      script: diff src/javascript.test.js src/typescript.test.ts || true
     - name: example
       script: node src/example.js
