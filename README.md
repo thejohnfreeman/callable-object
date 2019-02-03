@@ -38,3 +38,11 @@ it will have non-configurable properties `prototype` and `arguments` that [we
 must include in our own
 properties](https://stackoverflow.com/a/42876020/618906). If we use an arrow
 function instead, it only has configurable properties `name` and `length`.
+
+My implementation here works in JavaScript, but not in TypeScript. I don't
+know why.
+
+If you have a method that returns `this`, it will not return the proxy unless
+you manage it yourself: store a reference to the proxy, return it instead of
+`this`, and initialize it with the proxy after constructing both the object
+and the proxy.
