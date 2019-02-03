@@ -1,5 +1,5 @@
 {
-  "name": "callable-object",
+  "name": "@thejohnfreeman/callable-object",
   "version": "1.0.0",
   "description": "Trying to add function call operators to JavaScript objects.",
   "main": "src/javascript.js",
@@ -8,7 +8,21 @@
     "lint": "tsc --noEmit && tslint --project tsconfig.json 'src/**/*.{ts,tsx}'",
     "test": "jest"
   },
-  "repository": "https://github.com/thejohnfreeman/callable-object.git",
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "keywords": [
+    "callable",
+    "object"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejohnfreeman/callable-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thejohnfreeman/callable-object/issues"
+  },
+  "homepage": "https://github.com/thejohnfreeman/callable-object#readme",
   "author": "John Freeman <jfreeman08@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -20,7 +34,7 @@
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.3.1"
   },
-  "jest": {
-    "preset": "ts-jest"
+  "publishConfig": {
+    "access": "public"
   }
 }
