@@ -56,19 +56,6 @@ class CallableObjectHandler {
   }
 }
 
-// A proxy is not callable unless its target is callable.
-// https://stackoverflow.com/a/32360219/618906
-// To guarantee our target is callable, we use a dummy function, which means
-// we have to override every proxy trap to redirect them to our real target
-// object. We can use `Reflect` to help.
-
-// If we use a dummy function declared as a function or function expression,
-// then it will have non-configurable properties `prototype` and `arguments`
-// that we must include in our own properties.
-// https://stackoverflow.com/a/42876020/618906
-// If we use an arrow function instead, it only has configurable properties
-// `name` and `length`.
-
 function callable(object_, function_) {
   const handler = new CallableObjectHandler(object_, function_)
   return new Proxy(() => {}, handler)
