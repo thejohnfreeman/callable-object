@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "node"
+  - "10"
+env:
+  - TEST=src/javascript.test.js
+  - TEST=src/typescript.test.ts
+script:
+  - npm test $TEST
+matrix:
+  include:
+    - name: lint
+      script: npm lint
+    - name: diff
+      script: diff src/javascript.test.js src/typescript.test.ts
+    - name: example
+      script: node src/example.js
