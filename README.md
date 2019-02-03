@@ -2,7 +2,7 @@
 
 Function call operators for JavaScript objects.
 
-[![npm](https://img.shields.io/npm/v/@thejohnfreeman/callable-object.svg)](https://www.npmjs.com/package/@thejohnfreeman/callable-object)
+<!-- [![npm](https://img.shields.io/npm/v/@thejohnfreeman/callable-object.svg)](https://www.npmjs.com/package/@thejohnfreeman/callable-object) -->
 [![code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 [![build status](https://travis-ci.org/thejohnfreeman/callable-object.svg?branch=master)](https://travis-ci.org/thejohnfreeman/callable-object)
 
